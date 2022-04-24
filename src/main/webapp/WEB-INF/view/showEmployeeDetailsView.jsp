@@ -6,6 +6,6 @@
 <body>
 <h2>You're welcome!</h2>
 <br>
-Your name is: ${param.employeeName}
+Your name is: ${nameAttribute} ${description}
 </body>
 </html>
