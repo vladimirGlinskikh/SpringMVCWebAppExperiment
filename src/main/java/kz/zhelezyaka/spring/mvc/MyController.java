@@ -28,12 +28,12 @@ public class MyController {
 
     @RequestMapping("/showDetails")
     public String showEmployeeDetails(@ModelAttribute("employee") Employee emp) {
-        String name = emp.getName();
-        emp.setName("Mr " + name);
-        String surname = emp.getSurname();
-        emp.setSurname(surname + "!");
-        int salary = emp.getSalary();
-        emp.setSalary(salary * 2);
+//        String name = emp.getName();
+//        emp.setName("Mr " + name);
+//        String surname = emp.getSurname();
+//        emp.setSurname(surname + "!");
+//        int salary = emp.getSalary();
+//        emp.setSalary(salary * 2);
         return "showEmployeeDetailsView";
     }
 }
