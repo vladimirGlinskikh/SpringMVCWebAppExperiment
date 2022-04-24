@@ -22,6 +22,8 @@
     Which work version do you want?
     <form:radiobuttons path="workVersion" items="${employee.workVersions}"/>
     <br>
+    Foreign Language(s)
+    <form:checkboxes path="languages" items="${employee.languageList}"/>
     <input type="submit" value="OK">
 </form:form>
 </body>

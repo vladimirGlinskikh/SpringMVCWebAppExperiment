@@ -11,6 +11,8 @@ public class Employee {
     private Map<String, String> departments;
     private String workVersion;
     private Map<String, String> workVersions;
+    private String[] languages;
+    private Map<String, String> languageList;
 
     public Employee() {
         departments = new HashMap<>();
@@ -22,6 +24,11 @@ public class Employee {
         workVersions.put("Office", "Office");
         workVersions.put("Remote", "Remote");
         workVersions.put("Mixed", "Remote/Office");
+
+        languageList = new HashMap<>();
+        languageList.put("English", "EN");
+        languageList.put("French", "FR");
+        languageList.put("Spanish", "SP");
     }
 
     public String getName() {
@@ -78,6 +85,22 @@ public class Employee {
 
     public void setWorkVersion(String workVersion) {
         this.workVersion = workVersion;
+    }
+
+    public String[] getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
+    }
+
+    public Map<String, String> getLanguageList() {
+        return languageList;
+    }
+
+    public void setLanguageList(Map<String, String> languageList) {
+        this.languageList = languageList;
     }
 
     @Override
