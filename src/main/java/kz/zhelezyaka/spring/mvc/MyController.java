@@ -18,22 +18,12 @@ public class MyController {
 
     @RequestMapping("/askDetails")
     public String askEmployeeDetails(Model model) {
-//        Employee emp = new Employee();
-//        emp.setName("Vladimir");
-//        emp.setSurname("Glinskikh");
-//        emp.setSalary(700);
         model.addAttribute("employee", new Employee());
         return "askEmployeeDetailsView";
     }
 
     @RequestMapping("/showDetails")
     public String showEmployeeDetails(@ModelAttribute("employee") Employee emp) {
-//        String name = emp.getName();
-//        emp.setName("Mr " + name);
-//        String surname = emp.getSurname();
-//        emp.setSurname(surname + "!");
-//        int salary = emp.getSalary();
-//        emp.setSalary(salary * 2);
         return "showEmployeeDetailsView";
     }
 }

@@ -14,9 +14,13 @@
     <br>
     Salary <form:input path="salary"/>
     <br>
-    Department <form:select path="department">
-    <form:options items="${employee.departments}"/>
-</form:select>
+    Department
+    <form:select path="department">
+        <form:options items="${employee.departments}"/>
+    </form:select>
+    <br>
+    Which work version do you want?
+    <form:radiobuttons path="workVersion" items="${employee.workVersions}"/>
     <br>
     <input type="submit" value="OK">
 </form:form>

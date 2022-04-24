@@ -9,12 +9,19 @@ public class Employee {
     private int salary;
     private String department;
     private Map<String, String> departments;
+    private String workVersion;
+    private Map<String, String> workVersions;
 
     public Employee() {
         departments = new HashMap<>();
         departments.put("IT", "Information Technology");
         departments.put("HR", "Human Resources");
         departments.put("Sales", "Sales Management");
+
+        workVersions = new HashMap<>();
+        workVersions.put("Office", "Office");
+        workVersions.put("Remote", "Remote");
+        workVersions.put("Mixed", "Remote/Office");
     }
 
     public String getName() {
@@ -55,6 +62,22 @@ public class Employee {
 
     public void setDepartments(Map<String, String> departments) {
         this.departments = departments;
+    }
+
+    public Map<String, String> getWorkVersions() {
+        return workVersions;
+    }
+
+    public void setWorkVersions(Map<String, String> workVersions) {
+        this.workVersions = workVersions;
+    }
+
+    public String getWorkVersion() {
+        return workVersion;
+    }
+
+    public void setWorkVersion(String workVersion) {
+        this.workVersion = workVersion;
     }
 
     @Override
