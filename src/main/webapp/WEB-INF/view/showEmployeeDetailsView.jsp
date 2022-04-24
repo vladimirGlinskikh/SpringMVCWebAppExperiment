@@ -6,6 +6,10 @@
 <body>
 <h2>You're welcome!</h2>
 <br>
-Your name is: ${nameAttribute} ${description}
+Your name is: ${employee.name}
+<br>
+Your surname: ${employee.surname}
+<br>
+Your salary: ${employee.salary}
 </body>
 </html>
