@@ -1,5 +1,7 @@
 package kz.zhelezyaka.spring.mvc;
 
+import kz.zhelezyaka.spring.mvc.validation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +21,8 @@ public class Employee {
     private Map<String, String> workVersions;
     private String[] languages;
     private Map<String, String> languageList;
+    @CheckEmail(value = "zhelezyaka.kz", message = "Email must ends with zhelezyaka.kz")
+    private String email;
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "Please use pattern XXX-XX-XX")
     private String phoneNumber;
 
@@ -109,6 +113,14 @@ public class Employee {
 
     public void setLanguageList(Map<String, String> languageList) {
         this.languageList = languageList;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPhoneNumber() {
