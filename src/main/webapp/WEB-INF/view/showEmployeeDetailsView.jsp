@@ -6,17 +6,17 @@
 </head>
 <body>
 <h2>You're welcome!</h2>
-<br>
+<br><br>
 Your name is: ${employee.name}
-<br>
+<br><br>
 Your surname: ${employee.surname}
-<br>
+<br><br>
 Your salary: ${employee.salary}
-<br>
+<br><br>
 Your department: ${employee.department}
-<br>
+<br><br>
 Your work version: ${employee.workVersion}
-<br>
+<br><br>
 Your Languages:
 <ul>
     <c:forEach var="lang" items="${employee.languages}">

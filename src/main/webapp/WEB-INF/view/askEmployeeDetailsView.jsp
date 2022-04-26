@@ -6,22 +6,24 @@
 </head>
 <body>
 <h2>Please enter your details</h2>
-<br>
+<br><br>
 <form:form action="showDetails" modelAttribute="employee">
     Name <form:input path="name"/>
-    <br>
+    <form:errors path="name"/>
+    <br><br>
+    <form:errors path="surname"/>
     Surname <form:input path="surname"/>
-    <br>
+    <br><br>
     Salary <form:input path="salary"/>
-    <br>
+    <br><br>
     Department
     <form:select path="department">
         <form:options items="${employee.departments}"/>
     </form:select>
-    <br>
+    <br><br>
     Which work version do you want?
     <form:radiobuttons path="workVersion" items="${employee.workVersions}"/>
-    <br>
+    <br><br>
     Foreign Language(s)
     <form:checkboxes path="languages" items="${employee.languageList}"/>
     <input type="submit" value="OK">
