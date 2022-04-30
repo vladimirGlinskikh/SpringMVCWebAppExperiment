@@ -14,6 +14,7 @@
     </div>
     <div class="input-group">
         <form:form action="saveEmployee" modelAttribute="employee">
+            <form:hidden path="id"/>
             <table>
                 <tr>
                     <td><form:label path="name">Name</form:label></td>
